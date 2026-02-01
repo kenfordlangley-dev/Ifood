@@ -199,8 +199,9 @@ body {
 
 .input-wrapper {
     display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
+    flex-direction: row;
+    gap: var(--spacing-sm);
+    align-items: stretch;
 }
 
 .order-input {
@@ -214,6 +215,7 @@ body {
     font-weight: 500;
     transition: all var(--transition-normal);
     outline: none;
+    flex: 1;
 }
 
 .order-input:focus {
