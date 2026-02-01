@@ -171,12 +171,8 @@ class UIController {
         // Se mudou de status, o pedido vai sair da lista atual (pipeline)
         // Não vamos mudar de aba automaticamente, apenas notificar
 
-        if (status === 'delivered') {
-            this.showNotification('✅ Pedido movido para Histórico!', 'success');
-        } else if (status === 'preparing') {
-            this.showNotification('👨‍🍳 Pedido enviado para Cozinha!', 'success');
-        } else if (status === 'waiting') {
-            this.showNotification('🟡 Pedido aguardando retirada!', 'success');
+        if (navigator.vibrate) {
+            navigator.vibrate(50);
         }
 
         this.render();
