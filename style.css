@@ -183,7 +183,7 @@ body {
    ADD ORDER SECTION
    =================================== */
 .add-order-section {
-    padding: var(--spacing-xs) var(--spacing-md);
+    padding: var(--spacing-xs) 8px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -193,7 +193,7 @@ body {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-lg);
-    padding: var(--spacing-sm);
+    padding: 6px;
     box-shadow: var(--shadow-md);
 }
 
@@ -208,7 +208,7 @@ body {
     background: rgba(255, 255, 255, 0.05);
     border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-md);
-    padding: var(--spacing-xs) var(--spacing-sm);
+    padding: 8px 6px;
     font-size: 0.95rem;
     color: var(--color-text-primary);
     font-family: inherit;
@@ -232,7 +232,8 @@ body {
     background: linear-gradient(135deg, var(--color-accent) 0%, #6366f1 100%);
     border: none;
     border-radius: var(--radius-md);
-    padding: var(--spacing-xs) var(--spacing-sm);
+    padding: 8px 6px;
+    min-width: fit-content;
     font-size: 0.95rem;
     font-weight: 600;
     color: white;
@@ -240,7 +241,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--spacing-sm);
+    gap: 4px;
     transition: all var(--transition-normal);
     box-shadow: var(--shadow-md);
     font-family: inherit;
