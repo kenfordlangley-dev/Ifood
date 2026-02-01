@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuração - iFood Manager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #16213e 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            background: rgba(30, 30, 46, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+
+        .step {
+            background: rgba(139, 92, 246, 0.1);
+            border-left: 3px solid #8b5cf6;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #8b5cf6;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .step h3 {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-left: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(139, 92, 246, 0.4);
+        }
+
+        .note {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 30px;
+            color: #fbbf24;
+        }
+
+        .note strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #10b981;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🚀 Bem-vindo ao iFood Manager!</h1>
+        <p class="subtitle">Siga os passos abaixo para configurar seu aplicativo</p>
+
+        <div class="step">
+            <h3><span class="step-number">1</span> Configuração dos Ícones</h3>
+            <p>
+                Por favor, copie a imagem <code>app_icon_512*.png</code> que foi gerada e renomeie para os seguintes
+                nomes:
+                <br><br>
+                • icon-72x72.png<br>
+                • icon-96x96.png<br>
+                • icon-128x128.png<br>
+                • icon-144x144.png<br>
+                • icon-152x152.png<br>
+                • icon-192x192.png<br>
+                • icon-384x384.png<br>
+                • icon-512x512.png
+            </p>
+        </div>
+
+        <div class="step">
+            <h3><span class="step-number">2</span> Teste no Navegador</h3>
+            <p>
+                Para testar o PWA corretamente, você precisa servir os arquivos via HTTP/HTTPS.
+                <br><br>
+                <strong>Opção 1 (Python):</strong><br>
+                Abra o terminal nesta pasta e execute:<br>
+                <code>python -m http.server 8000</code>
+                <br><br>
+                <strong>Opção 2 (Node.js):</strong><br>
+                <code>npx serve</code>
+                <br><br>
+                Depois acesse: <code>http://localhost:8000</code>
+            </p>
+        </div>
+
+        <div class="step">
+            <h3><span class="step-number">3</span> Instalação no Celular</h3>
+            <p>
+                <strong>Android (Chrome):</strong><br>
+                Menu (⋮) → "Adicionar à tela inicial"
+                <br><br>
+                <strong>iOS (Safari):</strong><br>
+                Compartilhar (□↑) → "Adicionar à Tela de Início"
+            </p>
+        </div>
+
+        <div class="note">
+            <strong>📝 Nota Importante:</strong>
+            Por enquanto, renomeie manualmente o arquivo de ícone gerado para todos os tamanhos listados. Todos podem
+            usar a mesma imagem - o navegador redimensionará automaticamente.
+        </div>
+
+        <a href="index.html" class="btn">🍔 Abrir Aplicativo</a>
+    </div>
+</body>
+
+</html>

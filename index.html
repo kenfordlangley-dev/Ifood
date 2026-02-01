@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gerenciador de Pedidos iFood - Controle seus pedidos de forma rápida e eficiente">
+    <meta name="theme-color" content="#1a1a2e">
+    <title>Gerenciador iFood</title>
+
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="iFood Manager">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-top">
+                    <h1 class="app-title">
+                        <span class="title-icon">🍔</span>
+                        Gerenciador
+                    </h1>
+                    <button id="history-btn" class="history-btn-top" title="Ver Histórico">
+                        📜 Histórico <span class="badge" id="count-history-badge">0</span>
+                    </button>
+                </div>
+                <div class="stats-container">
+                    <div class="stat-item stat-preparing">
+                        <span class="stat-number" id="stat-preparing">0</span>
+                        <span class="stat-label">Em Preparo</span>
+                    </div>
+                    <div class="stat-item stat-waiting">
+                        <span class="stat-number" id="stat-waiting">0</span>
+                        <span class="stat-label">Aguardando</span>
+                    </div>
+                    <div class="stat-item stat-delivered">
+                        <span class="stat-number" id="stat-delivered">0</span>
+                        <span class="stat-label">Entregues</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Add Order Section -->
+        <section class="add-order-section">
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <input type="text" id="order-input" class="order-input" placeholder="Digite o número do pedido..."
+                        autocomplete="off">
+                    <button id="add-order-btn" class="add-btn">
+                        <span class="btn-icon">+</span>
+                        <span class="btn-text">Adicionar</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="nav-item active" data-filter="pending">
+                <div class="icon-container">
+                    <span class="nav-icon">🆕</span>
+                    <span class="nav-badge" id="count-pending">0</span>
+                </div>
+                <span class="nav-label">Novos</span>
+            </button>
+            <button class="nav-item" data-filter="preparing">
+                <div class="icon-container">
+                    <span class="nav-icon">🍳</span>
+                    <span class="nav-badge" id="count-preparing">0</span>
+                </div>
+                <span class="nav-label">Cozinha</span>
+            </button>
+            <button class="nav-item" data-filter="waiting">
+                <div class="icon-container">
+                    <span class="nav-icon">🛵</span>
+                    <span class="nav-badge" id="count-waiting">0</span>
+                </div>
+                <span class="nav-label">Entrega</span>
+            </button>
+        </nav>
+
+        <!-- Orders List -->
+        <section class="orders-section">
+            <div id="orders-container" class="orders-container">
+                <!-- Orders will be dynamically added here -->
+            </div>
+            <div id="empty-state" class="empty-state">
+                <div class="empty-icon">📦</div>
+                <h2 class="empty-title">Nenhum pedido ainda</h2>
+                <p class="empty-text">Adicione um número de pedido acima para começar</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="delete-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">⚠️</div>
+            <h2 class="modal-title">Confirmar Exclusão</h2>
+            <p class="modal-text">Tem certeza que deseja excluir este pedido?</p>
+            <div class="modal-actions">
+                <button id="cancel-delete-btn" class="modal-btn cancel-btn">Cancelar</button>
+                <button id="confirm-delete-btn" class="modal-btn confirm-btn">Excluir</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
