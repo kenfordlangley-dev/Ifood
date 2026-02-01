@@ -111,7 +111,7 @@ body {
     font-size: 1.75rem;
     font-weight: 800;
     text-align: center;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
     background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -139,7 +139,8 @@ body {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-md);
-    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-xs) var(--spacing-sm);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -193,7 +194,8 @@ body {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-lg);
-    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
     box-shadow: var(--shadow-md);
 }
 
@@ -207,8 +209,8 @@ body {
     background: rgba(255, 255, 255, 0.05);
     border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-md);
-    padding: var(--spacing-md) var(--spacing-lg);
-    font-size: 1rem;
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.95rem;
     color: var(--color-text-primary);
     font-family: inherit;
     font-weight: 500;
@@ -230,8 +232,8 @@ body {
     background: linear-gradient(135deg, var(--color-accent) 0%, #6366f1 100%);
     border: none;
     border-radius: var(--radius-md);
-    padding: var(--spacing-md) var(--spacing-lg);
-    font-size: 1rem;
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.95rem;
     font-weight: 600;
     color: white;
     cursor: pointer;
@@ -265,12 +267,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: var(--spacing-lg);
+    align-items: center;
+    margin-bottom: var(--spacing-md);
     padding: 0 var(--spacing-xs);
 }
 
 .app-title {
-    font-size: 1.75rem;
+    font-size: 1.35rem;
     font-weight: 800;
     margin: 0;
     background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
@@ -284,7 +287,7 @@ body {
 }
 
 .title-icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
     filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.5));
 }
 
@@ -331,8 +334,8 @@ body {
 .stats-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-xl);
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
 }
 
 .stat-item {
@@ -375,7 +378,8 @@ body {
 }
 
 .stat-number {
-    font-size: 1.75rem;
+.stat-number {
+    font-size: 1.25rem;
     font-weight: 800;
     line-height: 1;
     margin-bottom: 0.25rem;
@@ -383,7 +387,8 @@ body {
 }
 
 .stat-label {
-    font-size: 0.7rem;
+.stat-label {
+    font-size: 0.6rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -469,7 +474,8 @@ body {
 }
 
 .nav-icon {
-    font-size: 1.5rem;
+.nav-icon {
+    font-size: 1.3rem;
     filter: grayscale(100%) opacity(0.7);
     transition: all 0.3s ease;
 }
@@ -573,7 +579,8 @@ body {
     backdrop-filter: blur(10px);
     border: 3px solid var(--status-color);
     border-radius: var(--radius-lg);
-    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
     position: relative;
     overflow: hidden;
     transition: all var(--transition-normal);
@@ -640,8 +647,8 @@ body {
 }
 
 .order-number {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 2.25rem;
+    font-weight: 800;
     color: var(--color-text-primary);
     word-break: break-all;
 }
@@ -657,7 +664,8 @@ body {
     justify-content: center;
     cursor: pointer;
     transition: all var(--transition-normal);
-    font-size: 1.25rem;
+    transition: all var(--transition-normal);
+    font-size: 1.1rem;
 }
 
 .delete-btn:hover {
@@ -685,8 +693,8 @@ body {
 .status-btn {
     border: 2px solid;
     border-radius: var(--radius-sm);
-    padding: var(--spacing-sm);
-    font-size: 0.75rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.7rem;
     font-weight: 600;
     cursor: pointer;
     transition: all var(--transition-normal);
@@ -774,7 +782,8 @@ body {
    =================================== */
 .empty-state {
     text-align: center;
-    padding: var(--spacing-xl) var(--spacing-md);
+    text-align: center;
+    padding: var(--spacing-lg) var(--spacing-md);
     display: none;
 }
 
@@ -783,20 +792,23 @@ body {
 }
 
 .empty-icon {
-    font-size: 4rem;
+.empty-icon {
+    font-size: 2.5rem;
     margin-bottom: var(--spacing-md);
     opacity: 0.5;
 }
 
 .empty-title {
-    font-size: 1.5rem;
+.empty-title {
+    font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: var(--spacing-sm);
     color: var(--color-text-primary);
 }
 
 .empty-text {
-    font-size: 1rem;
+.empty-text {
+    font-size: 0.9rem;
     color: var(--color-text-muted);
 }
 
@@ -931,56 +943,56 @@ body {
 
 @media (max-width: 480px) {
     .app-title {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .title-icon {
-        font-size: 1.75rem;
+        font-size: 1.4rem;
     }
 
     .stats-container {
-        gap: 0.5rem;
+        gap: 0.35rem;
     }
 
     .stat-item {
-        min-width: 85px;
-        padding: 0.5rem 0.6rem;
+        min-width: 75px;
+        padding: 0.4rem 0.5rem;
     }
 
     .stat-number {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
     }
 
     .stat-label {
-        font-size: 0.65rem;
+        font-size: 0.55rem;
     }
 
     /* Otimizar cards para 2 colunas no mobile */
     .order-card {
-        padding: var(--spacing-md);
+        padding: var(--spacing-sm);
     }
 
     .order-label {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
     }
 
     .order-number {
-        font-size: 1.25rem;
+        font-size: 1.75rem;
     }
 
     .order-time {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
     }
 
     .delete-btn {
-        width: 32px;
-        height: 32px;
-        font-size: 1.1rem;
+        width: 28px;
+        height: 28px;
+        font-size: 1rem;
     }
 
     .status-btn {
-        padding: 0.5rem 0.3rem;
-        font-size: 0.65rem;
+        padding: 0.4rem 0.2rem;
+        font-size: 0.6rem;
     }
 }
 
