@@ -384,40 +384,11 @@ class UIController {
 // ===================================
 // PWA INSTALLATION
 // ===================================
-let deferredPrompt;
+// ===================================
+// PWA INSTALLATION (Disabled)
+// ===================================
+// Prompt automatico removido conforme solicitado
 
-window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    showInstallPrompt();
-});
-
-function showInstallPrompt() {
-    const promptDiv = document.createElement('div');
-    promptDiv.className = 'install-prompt';
-    promptDiv.innerHTML = `
-        <p><strong>📲 Instalar App</strong></p>
-        <p>Adicione este app à sua tela inicial para acesso rápido!</p>
-        <button id="install-btn">Instalar Agora</button>
-        <button id="dismiss-install" style="background: transparent; color: white; margin-left: 10px;">Agora não</button>
-    `;
-
-    document.body.appendChild(promptDiv);
-
-    document.getElementById('install-btn').addEventListener('click', async () => {
-        if (deferredPrompt) {
-            deferredPrompt.prompt();
-            const { outcome } = await deferredPrompt.userChoice;
-            console.log(`User response to install prompt: ${outcome}`);
-            deferredPrompt = null;
-            promptDiv.remove();
-        }
-    });
-
-    document.getElementById('dismiss-install').addEventListener('click', () => {
-        promptDiv.remove();
-    });
-}
 
 // ===================================
 // SERVICE WORKER REGISTRATION
