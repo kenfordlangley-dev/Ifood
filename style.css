@@ -139,7 +139,6 @@ body {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-md);
-    border-radius: var(--radius-md);
     padding: var(--spacing-xs) var(--spacing-sm);
     display: flex;
     flex-direction: column;
@@ -193,7 +192,6 @@ body {
     background: var(--color-bg-card);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: var(--radius-lg);
     border-radius: var(--radius-lg);
     padding: var(--spacing-md);
     box-shadow: var(--shadow-md);
@@ -266,7 +264,6 @@ body {
 .header-top {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     align-items: center;
     margin-bottom: var(--spacing-md);
     padding: 0 var(--spacing-xs);
@@ -378,7 +375,6 @@ body {
 }
 
 .stat-number {
-.stat-number {
     font-size: 1.25rem;
     font-weight: 800;
     line-height: 1;
@@ -386,7 +382,6 @@ body {
     text-shadow: 0 0 20px currentColor;
 }
 
-.stat-label {
 .stat-label {
     font-size: 0.6rem;
     font-weight: 600;
@@ -473,7 +468,6 @@ body {
     transform: translateY(-4px) scale(1.1);
 }
 
-.nav-icon {
 .nav-icon {
     font-size: 1.3rem;
     filter: grayscale(100%) opacity(0.7);
@@ -579,7 +573,6 @@ body {
     backdrop-filter: blur(10px);
     border: 3px solid var(--status-color);
     border-radius: var(--radius-lg);
-    border-radius: var(--radius-lg);
     padding: var(--spacing-md);
     position: relative;
     overflow: hidden;
@@ -663,7 +656,6 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all var(--transition-normal);
     transition: all var(--transition-normal);
     font-size: 1.1rem;
 }
@@ -782,7 +774,6 @@ body {
    =================================== */
 .empty-state {
     text-align: center;
-    text-align: center;
     padding: var(--spacing-lg) var(--spacing-md);
     display: none;
 }
@@ -792,13 +783,11 @@ body {
 }
 
 .empty-icon {
-.empty-icon {
     font-size: 2.5rem;
     margin-bottom: var(--spacing-md);
     opacity: 0.5;
 }
 
-.empty-title {
 .empty-title {
     font-size: 1.2rem;
     font-weight: 700;
@@ -806,7 +795,6 @@ body {
     color: var(--color-text-primary);
 }
 
-.empty-text {
 .empty-text {
     font-size: 0.9rem;
     color: var(--color-text-muted);
